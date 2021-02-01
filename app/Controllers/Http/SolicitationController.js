@@ -14,7 +14,7 @@ class SolicitationController {
    * @param {View} ctx.view
    */
     index({request, response, view}){
-        return response.send({greeting: 'Hello world in JSON'})
+        return response.send({"fulfillmentText": "Primeiro Webhook"})
     }
 
     async store ({request, response}){

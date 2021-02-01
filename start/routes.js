@@ -16,5 +16,5 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.get('/teste', 'SolicitationController.index');
+Route.post('/teste', 'SolicitationController.index');
 Route.post('/', 'SolicitationController.store')
