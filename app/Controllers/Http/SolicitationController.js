@@ -14,6 +14,7 @@ class SolicitationController {
    * @param {View} ctx.view
    */
     index({request, response, view}){
+        //Comentario
 
         let intentName = request.body.queryResult.intent.displayName;
 
