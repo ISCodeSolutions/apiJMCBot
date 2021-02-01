@@ -14,7 +14,17 @@ class SolicitationController {
    * @param {View} ctx.view
    */
     index({request, response, view}){
-        return response.send({"fulfillmentText": "Primeiro Webhook"})
+
+        let intentName = request.queryResult.intent.displayName;
+
+        if (intentName == "venda.salgados"){
+            return response.send({"fulfillmentText": "Primeiro Webhook"})
+        }
+        else if ( intentName == "venda.doces.simples"){
+            return response.send({"fulfillmentText": "Doces simples"})
+        }
+
+       
     }
 
     async store ({request, response}){
