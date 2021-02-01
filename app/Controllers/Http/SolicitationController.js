@@ -15,7 +15,7 @@ class SolicitationController {
    */
     index({request, response, view}){
 
-        let intentName = request.queryResult.intent.displayName;
+        let intentName = request.body.queryResult.intent.displayName;
 
         if (intentName == "venda.salgados"){
             return response.send({"fulfillmentText": "Primeiro Webhook"})
